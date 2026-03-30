@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Mf7nGdtBtvcQ32q1uwQLNZ6pe6Yiv87uIOE2ryWxlmk=",
+  "Source": "MiApiBackend",
+  "BasePath": "_content/MiApiBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
