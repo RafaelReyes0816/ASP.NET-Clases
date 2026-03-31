@@ -109,3 +109,4 @@
 /home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/obj/Debug/net8.0/MiApiBackend.pdb
 /home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/obj/Debug/net8.0/MiApiBackend.genruntimeconfig.cache
 /home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/obj/Debug/net8.0/ref/MiApiBackend.dll
+/home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/obj/Debug/net8.0/MiApiBackend.sourcelink.json
