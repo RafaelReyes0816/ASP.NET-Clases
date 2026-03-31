@@ -11,6 +11,8 @@ public class Producto
     public string? descripcion { get; set; }
     [Required(ErrorMessage = "La descripción es requerida")]
     [Range (1,100)]
+
+    public int stock {set; get;}
     public int precio { get; set; }
     [Required(ErrorMessage = "El precio es requerido")]
     

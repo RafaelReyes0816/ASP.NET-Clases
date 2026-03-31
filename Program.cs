@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MiApiBackend.Data;
+using MiApiBackend.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Conexión a la base de datos
 builder.Services.AddDbContext <DBContext>(options=>
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 
 builder.Services.AddControllers();
 
