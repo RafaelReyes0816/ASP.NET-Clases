@@ -4,13 +4,13 @@ using MiApiBackend.Services;
 
 namespace MiApiBackend.Controllers;
 
-[Route("api/categorias")]
+[Route("api/pedidos")]
 [ApiController]
-public class CategoriaController : ControllerBase
+public class PedidosController : ControllerBase
 {
-    private readonly ICategoriaService _service;
+    private readonly IPedidoService _service;
 
-    public CategoriaController(ICategoriaService service)
+    public PedidosController(IPedidoService service)
     {
         _service = service;
     }
@@ -24,12 +24,12 @@ public class CategoriaController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
-        var c = await _service.GetByIdAsync(id);
-        return c == null ? NotFound() : Ok(c);
+        var p = await _service.GetByIdAsync(id);
+        return p == null ? NotFound() : Ok(p);
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post(CategoriaCreateDto dto)
+    public async Task<IActionResult> Post(PedidoCreateDto dto)
     {
         return Ok(await _service.CreateAsync(dto));
     }

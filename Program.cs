@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MiApiBackend.Data;
 using MiApiBackend.Repositories;
+using MiApiBackend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,13 @@ builder.Services.AddDbContext <DBContext>(options=>
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<IProductoService, ProductoService>();
+
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+
+builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
+builder.Services.AddScoped<IPedidoService, PedidoService>();
 
 builder.Services.AddControllers();
 
