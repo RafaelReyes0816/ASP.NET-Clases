@@ -110,3 +110,11 @@
 /home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/obj/Debug/net8.0/MiApiBackend.genruntimeconfig.cache
 /home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/obj/Debug/net8.0/ref/MiApiBackend.dll
 /home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/obj/Debug/net8.0/MiApiBackend.sourcelink.json
+/home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/rafaelreyes/Documentos/Proyectos web/MiApiBackend/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

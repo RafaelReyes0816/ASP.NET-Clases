@@ -1,32 +1,39 @@
 using Microsoft.AspNetCore.Mvc;
-using MiApiBackend.Data;
-using MiApiBackend.Models;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using MiApiBackend.Models.DTOs;
+using MiApiBackend.Services;
 
 namespace MiApiBackend.Controllers;
 
 [Route("api/productos")]
 [ApiController]
+[Authorize]
 public class ProductosController : ControllerBase
 {
-    private readonly DBContext _context;
+    private readonly IProductoService _service;
 
-    public ProductosController(DBContext context)
+    public ProductosController(IProductoService service)
     {
-        _context = context;
+        _service = service;
     }
 
     [HttpGet]
     public async Task<IActionResult> Get()
     {
-        return Ok(await _context.Productos.ToListAsync());
+        return Ok(await _service.GetAllAsync());
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get(int id)
+    {
+        var p = await _service.GetByIdAsync(id);
+        return p == null ? NotFound() : Ok(p);
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post(Producto producto)
+    public async Task<IActionResult> Post(ProductoCreateDto dto)
     {
-        _context.Productos.Add(producto);
-        await _context.SaveChangesAsync();
-        return Ok(producto);
+        var productoCreado = await _service.CreateAsync(dto);
+        return Ok(productoCreado);
     }
 }
